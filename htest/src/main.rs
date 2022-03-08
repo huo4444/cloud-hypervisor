@@ -15,13 +15,13 @@ fn main() {
         }
     });
 
-    let clientHandler=thread::spawn(||{
-        for i in 0..5  {
-            thread::sleep(Duration::from_millis(1000));
-            client::startClient();
-        }
+    // let clientHandler=thread::spawn(||{
+    //     for i in 0..5  {
+    //         thread::sleep(Duration::from_millis(1000));
+    //         client::startClient();
+    //     }
         
-    });
+    // });
 
     let received:Receiver<String> = rx.recv().unwrap(); 
     println!("Got: {:?}", received);
