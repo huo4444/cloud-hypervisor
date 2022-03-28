@@ -259,7 +259,7 @@ impl InterruptSourceGroup for LegacyUserspaceInterruptGroup {
 pub struct LegacyUserspaceInterruptManager {
     ioapic: Arc<Mutex<dyn InterruptController>>,
 }
-
+//pci pcie  message signal interrupt(msi/msi-x)
 pub struct MsiInterruptManager<IrqRoutingEntry> {
     allocator: Arc<Mutex<SystemAllocator>>,
     vm: Arc<dyn hypervisor::Vm>,
