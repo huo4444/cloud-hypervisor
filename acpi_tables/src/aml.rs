@@ -4,7 +4,7 @@
 //
 
 use std::marker::PhantomData;
-
+//aml:acpi machine language  对应 asl:acpi source language 编译来
 pub trait Aml {
     fn append_aml_bytes(&self, _v: &mut Vec<u8>) {
         unimplemented!()
